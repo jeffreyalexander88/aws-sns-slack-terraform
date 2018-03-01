@@ -159,7 +159,7 @@ def lambda_handler(event, context):
         attachments = [{
             "text": "Details",
             "fallback": message,
-            "color": "good",
+            "color": "danger",
             "fields": [{
                 "title": "Capacity Change",
                 "value": autoscaling_capacity_change(json_msg['Cause']),
