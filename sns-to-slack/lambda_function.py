@@ -45,7 +45,7 @@ __status__ = "Production"
 
 DEFAULT_USERNAME = os.environ.get('DEFAULT_USERNAME', 'AWS Lambda')
 DEFAULT_CHANNEL = os.environ.get('DEFAULT_CHANNEL', '#webhook-tests')
-DEFAULT_EMOJI = os.environ.get('DEFAULT_EMOJI', ':information_source:')
+DEFAULT_EMOJI = os.environ.get('DEFAULT_EMOJI', ':fire:')
 
 
 def get_slack_emoji(event_src, topic_name, event_cond='default'):
@@ -161,10 +161,6 @@ def lambda_handler(event, context):
             "fallback": message,
             "color": "good",
             "fields": [{
-                "title": "Channel Alert",
-                "value": "@channel",
-                "short": True
-            }, {
                 "title": "Capacity Change",
                 "value": autoscaling_capacity_change(json_msg['Cause']),
                 "short": True
