@@ -28,10 +28,10 @@ variable "default_emoji" {
 
 variable "lambda_iam_role_name" {
   type = "string"
-  default = "lambda-sns-to-slack"
+  default = "lambda_slack"
 }
 
 variable "lambda_iam_policy_name" {
   type = "string"
-  default = "lambda-sns-to-slack-policy"
+  default = "lambda_slack_policy"
 }
